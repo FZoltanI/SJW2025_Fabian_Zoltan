@@ -57,6 +57,13 @@ function szamitas(){
     }
 }
 
+function reset(){
+    document.getElementById("mennyiseg").value = 1;
+    document.getElementById("gyumolcs_neve").value = "-1";
+    closeError();
+}
+
 function closeError(){
     document.getElementById("hibauzenet").classList.add("d-none");
 }
+
