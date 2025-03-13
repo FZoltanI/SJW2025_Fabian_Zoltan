@@ -8,6 +8,8 @@
     --piros: rgb(151, 23, 23);
 }
 
+/* Header & Navbar */
+
 .header{
     background-image: url("../img/banner_fruits.png");
     background-repeat: no-repeat;
@@ -22,7 +24,7 @@
     position: absolute;
     left: 30px;
     top: 30px;
-    
+
     width: 300px;
     height: 300px;
     background-color: var(--turkiz);
@@ -35,4 +37,36 @@
     align-items: center;
     border-radius: 50%;
     border: 10px double #fff;
+}
+
+.turkizbg{
+    background-color: var(--turkiz);
+}
+
+.nav-link{
+    border: 3px solid transparent;
+}
+
+.nav-link:hover{
+    border-bottom: 3px double #fff;
+    border-top: 3px double #fff;
+}
+
+/* --- */
+
+h2{
+    color: var(--sotet-turkiz);
+    font-family: Haettenschweiler, Arial;
+    margin-top: 30px;
+}
+
+.kiwi{
+    width: 250px;
+    float: right;
+}
+
+@media screen and (max-width: 770px) {
+    .kiwi{
+        display: none;
+    }
 }
