@@ -77,23 +77,108 @@ Rost
 
 Az étkezési rostok olyan növényi eredetű szénhidrátok, amelyeket az emberi szervezet nem képes megemészteni, ezért eljutnak a vastagbélbe. Többféle jótékony hatásuk is van: hatékonyabbá teszik a víz megkötését, az elfogyasztott ételek felszívódását, a bélműködést, az emésztést. Felszívják az epesav sóit és a koleszterint, megkötik az emésztéskor termelődő gázok egy részét. A rosthiányos táplálkozás rövidtávon székrekedést, hosszútávon elhízást, cukorbetegséget vagy akár vastagbélrákot is okozhat.
 
-Tápérték- és kalóriatáblázat
-Gyümölcs neve 	Kalória 	Zsír 	Szénhidrát 	Fehérje 	Rost
-Banán 	89 kcal 	0.33 g 	22.8 g 	1.09 g 	2.6 g
-Alma 	52 kcal 	0.17 g 	13.8 g 	0.26 g 	1.3 g
-Narancs 	47 kcal 	0.12 g 	11.8 g 	0.94 g 	2 g
+        <h2>Tápérték- és kalóriatáblázat</h2>
+        <table class="mx-auto w-75">
+            <thead>
+                <tr>
+                    <th>Gyümölcs neve</th>
+                    <th>Kalória</th>
+                    <th>Zsír</th>
+                    <th>Szénhidrát</th>
+                    <th>Fehérje</th>
+                    <th>Rost</th>
+                </tr>
+            </thead>
 
-Kalkulátor
-Gyümölcs neve
-Válasszon egy gyümölcsöt!
-Mennyiség
+            <tbody>
+                <tr>
+                    <td>Banán</td>
+                    <td>89 kcal</td>
+                    <td class = "text-center">0.33 g</td>
+                    <td class = "text-center">22.8 g</td>
+                    <td class = "text-center">1.09 g</td>
+                    <td class = "text-center">2.6 g</td>
+                </tr>
 
-Zsír
-Rost
-Kalória
-Fehérje
-Szénhidrát
+                <tr>
+                    <td>Alma</td>
+                    <td>52 kcal</td>
+                    <td class = "text-center">0.17 g</td>
+                    <td class = "text-center">13.8 g</td>
+                    <td class = "text-center">0.26 g</td>
+                    <td class = "text-center">1.3 g</td>
+                </tr>
 
+                <tr>
+                    <td>Narancs</td>
+                    <td>47 kcal</td>
+                    <td class = "text-center">0.12 g</td>
+                    <td class = "text-center">11.8 g</td>
+                    <td class = "text-center">0.94 g</td>
+                    <td class = "text-center">2 g</td>
+                </tr>
+            </tbody>
+        </table>
+ 	 	 	 	 	
+        <h2>Kalkulátor</h2>
+ 	 	 	 	 	
+        <form class="w-50 mx-auto">
+            <div class="mb-3">
+                <label for="gyumolcs_neve" class="form-label">Gyümölcs neve</label>
+                <select name="gyumolcs_neve" id="gyumolcs_neve" class="form-select" onchange="closeError()" >
+                    <option value="-1">Válasszon egy gyümölcsöt!</option>
+                </select>
+            </div>
+
+            <div class="mb-3">
+                <label for="mennyiseg" class="form-label">Mennyiség</label>
+                <input type="number" name="mennyiseg" id="mennyiseg" min="1" value="1" class="form-control">
+            </div>
+
+            <button type="button" class="btn btn-dark" onclick="szamitas()">Számítás</button>
+            <button type="button" class="btn btn-outline-dark">Visszaállítás</button>
+
+            <div class="alert alert-danger my-3 d-none" id = "hibauzenet" role="alert" >Válasszon egy gyümölcsöt a lenyíló listából!</div>
+
+            <div class="row my-3">
+                <div class="col">
+                    <div class="kategoria zoldbg">
+                        <h3 class="m-0">Zsír</h3>
+                        <p id="calc_fat"></p>
+                    </div>
+                </div>
+    
+                <div class="col">
+                    <div class="kategoria kekbg">
+                        <h3 class="m-0">Rost</h3>
+                        <p id="calc_fiber"></p>
+                    </div>
+                </div>
+    
+                <div class="col">
+                    <div class="kategoria turkizbg">
+                        <h3 class="m-0">Kalória</h3>
+                        <p id="calc_calory"></p>
+                    </div>
+                </div>
+    
+                <div class="col">
+                    <div class="kategoria lilabg">
+                        <h3 class="m-0">Fehérje</h3>
+                        <p id="calc_protein"></p>
+                    </div>
+                </div>
+    
+                <div class="col">
+                    <div class="kategoria pirosbg">
+                        <h3 class="m-0">Szénhidrát</h3>
+                        <p id="calc_carbohydrate"></p>
+                    </div>
+                </div>
+            </div>
+        </form>
+
+        
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>

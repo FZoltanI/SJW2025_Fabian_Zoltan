@@ -4,8 +4,33 @@
     --sotet-turkiz: rgb(9, 81, 92);
     --zold: rgb(73, 126, 23);
     --kek: rgb(31, 83, 143);
-    --lila: rgb(31, 83, 143);
+    --lila: rgb(97, 30, 114);
     --piros: rgb(151, 23, 23);
+}
+
+.turkizbg{
+    background-color: var(--turkiz);
+    outline-color: var(--turkiz) !important;
+}
+
+.zoldbg{
+    background-color: var(--zold);
+    outline-color: var(--zold) !important;
+}
+
+.kekbg{
+    background-color: var(--kek);
+    outline-color: var(--kek) !important;
+}
+
+.lilabg{
+    background-color: var(--lila);
+    outline-color: var(--lila) !important;
+}
+
+.pirosbg{
+    background-color: var(--piros);
+    outline-color: var(--piros) !important;
 }
 
 /* Header & Navbar */
@@ -39,9 +64,7 @@
     border: 10px double #fff;
 }
 
-.turkizbg{
-    background-color: var(--turkiz);
-}
+
 
 .nav-link{
     border: 3px solid transparent;
@@ -69,4 +92,45 @@ h2{
     .kiwi{
         display: none;
     }
+
+    .w-75, .w-50{
+        width: 100% !important;
+    }
 }
+
+thead{
+    background-color: #000 !important;
+    color: #fff;
+}
+
+th, td{
+    padding: 10px;
+}
+
+tr{
+    border-bottom: 1px solid rgb(220, 220, 220);
+}
+
+tbody tr:nth-of-type(odd){
+    background-color: rgb(242, 242, 242);
+}
+
+.kategoria{
+    text-align: center;
+    outline: 3px solid;
+    outline-offset: 3px;
+    border-radius: 10px;
+}
+
+.kategoria h3{
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    padding: 5px;    
+}
+
+.kategoria p{
+    color: #fff;
+    padding-bottom: 10px;
+}
+
